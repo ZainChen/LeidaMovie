@@ -2,7 +2,7 @@ var personNumber = 0;  //准备随机分配的人数
 var personName = new Array("",
   "曾文豪", "廖元武", "吴小伟", "熊敏", "罗剑", "付建平", "罗智强", "彭昌文", "王福东",
   "谢虎虎", "谢晔玲", "曾小斌", "段聪", "康宇晨", "孔佳承", "欧阳煜", "朱佳", "陈志银",
-  "戴新亮", "周吉海", "21", "22", "23", "24", "25", "26", "27",
+  "戴新亮", "周吉海", "欧著源", "22", "23", "24", "25", "26", "27",
   "28", "29", "30", "31", "32", "33", "34", "35", "36",
   "37", "38", "39", "40", "41", "42", "43", "44", "45"
 );
@@ -13,6 +13,7 @@ function Execute() {  //在文档加载完成后才能够去执行,可以避免�
   startButton();  //开始分配座位按钮
   shiftButton();  //背景与位置选择框切换功能
   moveLi();  //鼠标经过li效果
+  allSelect();  //座位全选函数
 }
 
 function selectSeat() {  //挑选座位和人员(只有选中了的座位才给排序)
@@ -52,6 +53,25 @@ function selectSeat() {  //挑选座位和人员(只有选中了的座位才给�
         document.getElementById("hide-yn").innerHTML = "Num:"+personNumber;  //显示已选位置数量
       }
     })(i);
+  }
+}
+
+function allSelect() {  //座位全选函数
+  var li = document.getElementsByTagName("li");
+  var shb = document.getElementById("shift-button");
+  var alc = document.getElementById("all-choice");
+  alc.onclick = function() {
+    if(shb.innerText != "show") {
+      for(var i = 0; i < li.length; i++) {
+        var thisDiv = li[i].getElementsByTagName("div")[0];
+        if(thisDiv.id == "li-person") {  //当前位置没人时可单击添加一个人
+          personNumber++;
+          thisDiv.id = "li-person"+personNumber;
+          li[i].style.background = "rgba(0,0,0,0.2)";
+        }
+      }
+      document.getElementById("hide-yn").innerHTML = "Num:"+personNumber;  //显示已选位置数量
+    }
   }
 }
 
