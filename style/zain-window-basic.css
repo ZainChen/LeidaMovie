@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*禁止页面选择文字*/
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /*background: #eee;*/
+}
+zain-window,#zain-window {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 0 15px #555;
+}
+zain-window-title,#zain-window-title {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(0,0,0,0.6);
+  /*cursor: crosshair;*/
+}
+zain-window-content,#zain-window-content {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: rgba(200,200,200,0.5);
+}
+zain-window-left-top,#zain-window-left-top {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.9);
+  cursor: nw-resize;
+}
+zain-window-top,#zain-window-top {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.5);
+  cursor: n-resize;
+}
+zain-window-right-top,#zain-window-right-top {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.9);
+  cursor: ne-resize;
+}
+zain-window-left,#zain-window-left {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.5);
+  cursor: w-resize;
+}
+zain-window-right,#zain-window-right {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.5);
+  cursor: e-resize;
+}
+zain-window-left-bottom,#zain-window-left-bottom {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.9);
+  cursor: sw-resize;
+}
+zain-window-bottom,#zain-window-bottom {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.5);
+  cursor: s-resize;
+}
+zain-window-right-bottom,#zain-window-right-bottom {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  background: rgba(50,50,50,0.9);
+  cursor: se-resize;
+}
