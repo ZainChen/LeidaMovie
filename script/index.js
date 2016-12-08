@@ -81,6 +81,14 @@ function imgInitialize() {  //初始化图片(将所有图片变为0.png)
 
 function randomSeat() {  //随机分配座位功能实现
   imgInitialize();  //初始化图片(将所有图片变为0.png)
+  document.getElementById("li-img-leida1").src = "./image/leida1.jpg";
+  document.getElementById("li-name13").innerText = "雷老师";
+  document.getElementById("li-img-leida2").src = "./image/leida2.jpg";
+  document.getElementById("li-name14").innerText = "师母";
+  var lple1 = document.getElementById("li-person-leida1");
+  setTimeout(function() {lple1.style.left = "0px"; lple1.style.top = "0px";}, 500);
+  var lple2 = document.getElementById("li-person-leida2");
+  setTimeout(function() {lple2.style.left = "0px"; lple2.style.top = "0px";}, 1000);
   var k, a = new Array(), t;
   for(var i = 0; i < personNumber; i++) {
     a[i] = i;
@@ -95,14 +103,6 @@ function randomSeat() {  //随机分配座位功能实现
     var lp = document.getElementById("li-person"+(i+1));
     lp.innerHTML = "<p id='li-name"+(i+1)+"'>"+personName[a[i]+1]+"</p><img class='li-img"+(i+1)+"' src='./image/"+(a[i]+1)+".jpg'>";
   }
-  document.getElementById("li-img-leida1").src = "./image/leida1.jpg";
-  document.getElementById("li-name13").innerText = "雷老师";
-  document.getElementById("li-img-leida2").src = "./image/leida2.jpg";
-  document.getElementById("li-name14").innerText = "师母";
-  var lple1 = document.getElementById("li-person-leida1");
-  setTimeout(function() {lple1.style.left = "0px"; lple1.style.top = "0px";}, 500);
-  var lple2 = document.getElementById("li-person-leida2");
-  setTimeout(function() {lple2.style.left = "0px"; lple2.style.top = "0px";}, 1000);
 }
 
 function seatAnimationDetail(n, io) {  //div移入或移出座位详细控制动画,n为第几个div,io控制进入位置或出去动画
