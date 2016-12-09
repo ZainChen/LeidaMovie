@@ -5,7 +5,8 @@ var personName = new Array("",
   "戴新亮", "周吉海", "欧著源", "朱婷", "杨成龙", "鄢艳玲", "郭莉华",
   "熊志勇", "邓琼",
   "张君", "黄木生", "何银昆", "邹逸帆", "吴志峰", "李福东", "凌杰", "丰坤", "陈涛",
-  "曾前", "欧阳浩明", "徐海洋", "朱模建", "--41--", "--42--", "--43--", "--44--", "--45--"
+  "曾前", "欧阳浩明", "徐海洋", "朱模建", "--41--", "--42--", "--43--", "--44--", "--45--",
+  "--46--", "--47--", "--48--", "--49--", "--50--", "--51--", "--52--", "--53--", "--54--"
 );
 // var pn = new Array();
 
@@ -18,7 +19,7 @@ function Execute() {  //在文档加载完成后才能够去执行,可以避免�
 }
 
 function selectSeat() {  //挑选座位和人员(只有选中了的座位才给排序)
-  for(var i = 1; i <= 45; i++) {
+  for(var i = 1; i <= 54; i++) {
     var li = document.getElementById("li"+i);
     ~(function(i) {
       li.onclick = function() {
@@ -164,7 +165,7 @@ function shiftButton() {  //背景与位置选择框切换功能
     if(shb.innerText == "show") {
       seb.style.backgroundPosition = "0px -500px";
       shb.innerText = "seat";
-      shb.style.bottom = "-45px";
+      // shb.style.bottom = "-45px";
       for(var i = 0; i < span.length; i++) {
         span[i].style.display = "inline-block";
       }
@@ -177,7 +178,7 @@ function shiftButton() {  //背景与位置选择框切换功能
     } else {
       seb.style.backgroundPosition = "0px 0px";
       shb.innerText = "show";
-      shb.style.bottom = "100px";
+      // shb.style.bottom = "100px";
       for(var i = 0; i < span.length; i++) {
         span[i].style.display = "none";
       }

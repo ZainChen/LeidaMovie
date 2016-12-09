@@ -11,9 +11,11 @@
 .start {
   position: absolute;
   z-index: 100;
+  top: 60px;
   width: 100%;
-  height: 100%;
-  font-size: 32px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 25px;
   text-align: center;
   color: #fff;
   background: rgba(0,0,0,0.3);
@@ -63,20 +65,13 @@
 }
 .shift-button,.all-choice {
   position: absolute;
-  z-index: 400;
-  bottom: 100px;
-  left:0px;
-  right:0px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90px;
-  height: 40px;
-  line-height: 40px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   font-size: 25px;
   color: #fff;
   background: #999;
-  box-shadow: 0 0 15px #555;
   transition: 0.5s;
   -moz-transition: 0.5s; /* Firefox 4 */
   -webkit-transition: 0.5s; /* Safari 和 Chrome */
@@ -87,9 +82,10 @@
   background: #555;
 }
 .all-choice {
-  bottom: -45px;
-  left: 750px;
-  font-size: 20px;
+  top: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  background: #888;
 }
 .all-choice:hover {
   cursor: pointer;
@@ -393,6 +389,60 @@
   z-index: 42;
   left: 100px;
   top: 30px;
+  transition: 0.5s;
+}
+.li-person46 {
+  z-index: 28;
+  left: -100px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person47 {
+  z-index: 29;
+  left: -206px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person48 {
+  z-index: 30;
+  left: -312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person49 {
+  z-index: 31;
+  left: -418px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person50 {
+  z-index: 36;
+  left: 524px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person51 {
+  z-index: 33;
+  left: 418px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person52 {
+  z-index: 34;
+  left: 312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person53 {
+  z-index: 33;
+  left: 206px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person54 {
+  z-index: 32;
+  left: 100px;
+  top: 40px;
   transition: 0.5s;
 }
 .seat li div p {
