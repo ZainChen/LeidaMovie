@@ -71,7 +71,7 @@
   text-align: center;
   font-size: 25px;
   color: #fff;
-  background: #999;
+  background: rgba(0,0,0,0.7);
   transition: 0.5s;
   -moz-transition: 0.5s; /* Firefox 4 */
   -webkit-transition: 0.5s; /* Safari 和 Chrome */
@@ -85,7 +85,7 @@
   top: 30px;
   font-size: 18px;
   line-height: 30px;
-  background: #888;
+  background: rgba(0,0,0,0.5);
 }
 .all-choice:hover {
   cursor: pointer;
