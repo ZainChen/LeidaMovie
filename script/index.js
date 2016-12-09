@@ -1,11 +1,11 @@
 var personNumber = 0;  //准备随机分配的人数
 var personName = new Array("",
   "曾文豪", "廖元武", "吴小伟", "熊敏", "罗剑", "付建平", "罗智强", "彭昌文", "王福东",
-  "谢虎虎", "谢晔玲", "曾小斌", "段聪", "康宇晨", "孔佳承", "欧阳煜", "朱佳", "陈志银",
+  "邓琼", "谢晔玲", "曾小斌", "段聪", "康宇晨", "孔佳承", "欧阳煜", "朱佳", "陈志银",
   "戴新亮", "周吉海", "欧著源", "朱婷", "杨成龙", "鄢艳玲", "郭莉华",
-  "熊志勇", "邓琼",
-  "张君", "黄木生", "何银昆", "邹逸帆", "吴志峰", "李福东", "凌杰", "丰坤", "陈涛",
-  "曾前", "欧阳浩明", "徐海洋", "朱模建", "--41--", "--42--", "--43--", "--44--", "--45--",
+  "熊志勇", "朱模建",
+  "张君", "徐海洋", "何银昆", "邹逸帆", "吴志峰", "李福东", "凌杰", "欧阳浩明", "陈涛",
+  "--37--", "--38--", "--39--", "--40--", "--41--", "--42--", "--43--", "--44--", "--45--",
   "--46--", "--47--", "--48--", "--49--", "--50--", "--51--", "--52--", "--53--", "--54--"
 );
 // var pn = new Array();
@@ -29,7 +29,7 @@ function selectSeat() {  //挑选座位和人员(只有选中了的座位才给�
           personNumber++;
           thisDiv.id = "li-person"+personNumber;
           this.style.background = "rgba(0,0,0,0.2)";
-        } else if(thisDiv.id != "li-person-leida1" && thisDiv.id != "li-person-leida2" && shb.innerText != "show") {
+        } else if(thisDiv.id != "li-person-leida1" && thisDiv.id != "li-person-leida2" && thisDiv.id != "li-person-leida3" && shb.innerText != "show") {
           var k = 0, l = thisDiv.id.length;
           if(l == 10) {  //求当前减少的人所在div的id编号
             k = parseInt(thisDiv.id[l-1]);
@@ -83,7 +83,7 @@ function startButton() {  //开始分配座位按钮
   start.onclick = function() {
     if(shb.innerText == "seat") {
       randomSeat();  //随机分配座位功能实现
-      setTimeout(function() {seatAnimationIn(1);}, 1500);  //div移入座位控制总动画
+      setTimeout(function() {seatAnimationIn(1);}, 2000);  //div移入座位控制总动画
     }
   }
 }
@@ -104,13 +104,17 @@ function imgInitialize() {  //初始化图片(将所有图片变为0.png)
 function randomSeat() {  //随机分配座位功能实现
   imgInitialize();  //初始化图片(将所有图片变为0.png)
   document.getElementById("li-img-leida1").src = "./image/leida1.jpg";
-  document.getElementById("li-name13").innerText = "雷老师";
+  document.getElementById("li-name14").innerText = "雷老师";
   document.getElementById("li-img-leida2").src = "./image/leida2.jpg";
-  document.getElementById("li-name14").innerText = "师母";
+  document.getElementById("li-name15").innerText = "师母";
+  document.getElementById("li-img-leida3").src = "./image/leida3.jpg";
+  document.getElementById("li-name49").innerText = "曾前";
   var lple1 = document.getElementById("li-person-leida1");
   setTimeout(function() {lple1.style.left = "0px"; lple1.style.top = "0px";}, 500);
   var lple2 = document.getElementById("li-person-leida2");
   setTimeout(function() {lple2.style.left = "0px"; lple2.style.top = "0px";}, 1000);
+  var lple3 = document.getElementById("li-person-leida3");
+  setTimeout(function() {lple3.style.left = "0px"; lple3.style.top = "0px";}, 1500);
   var k, a = new Array(), t;
   for(var i = 0; i < personNumber; i++) {
     a[i] = i;
@@ -200,7 +204,7 @@ function moveLi() {  //鼠标经过li效果
   for(var i = 0; i < li.length; i++) {
     ~(function() {
       li[i].onmouseover = function() {
-        if(shb.innerText == "seat" && this.id != "li13" && this.id != "li14") {
+        if(shb.innerText == "seat" && this.id != "li14" && this.id != "li15" && this.id != "li49") {
           if(this.style.background == "rgba(0, 0, 0, 0)" || this.style.background == "") {
             this.style.background = "rgba(0,0,0,0.3)";
             this.style.cursor = "pointer";
@@ -208,7 +212,7 @@ function moveLi() {  //鼠标经过li效果
         }
       }
       li[i].onmouseout = function() {
-        if(shb.innerText == "seat" && this.id != "li13" && this.id != "li14") {
+        if(shb.innerText == "seat" && this.id != "li14" && this.id != "li15" && this.id != "li49") {
           // alert(this.style.background);
           if(this.style.background == "rgba(0, 0, 0, 0.298039)" || this.style.background == "rgba(0, 0, 0, 0.3)") {
             this.style.background = "rgba(0,0,0,0)";

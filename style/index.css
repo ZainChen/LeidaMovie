@@ -115,10 +115,10 @@
   cursor: pointer;
   /*background: rgba(0,0,0,0.3);*/
 }
-.seat #li13,.seat #li14 {
+.seat #li14,.seat #li15 {
   background: rgba(240,154,154,0);
 }
-.seat #li13:hover,.seat #li14:hover {
+.seat #li14:hover,.seat #li15:hover {
   cursor: default;
 }
 .seat li div,.seat li h1 {
@@ -472,6 +472,6 @@
   color: #fff;
   background: rgba(0,0,0,0.5);
 }
-.seat #li13 span,.seat #li14 span {
+.seat #li14 span,.seat #li15 span,.seat #li49 span {
   background: rgba(0,0,0,0.8);
 }
