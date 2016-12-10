@@ -7,6 +7,6 @@ windowZain.setMinWidth("90px");
 windowZain.setMinHeight("150px");
 windowZain.setTitleHeight("30px");
 windowZain.setBorderWidth("5px");
-windowZain.setLeft("600px");
+windowZain.setLeft("590px");
 windowZain.setTop("450px");
 windowZain.showWindowInfo();
