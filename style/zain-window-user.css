@@ -20,6 +20,7 @@ zain-window,#zain-window {
   position: absolute;
   z-index: 500;
   box-shadow: 0 0 15px #555;
+  transition: 1s;
 }
 zain-window-title,#zain-window-title {
   display: block;

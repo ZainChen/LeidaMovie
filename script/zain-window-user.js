@@ -1,12 +1,12 @@
 var windowZain = new ZainWindow("zain");  //构造窗口对象
-windowZain.setWidth("200px");  //设置窗口相关属性
-windowZain.setHeight("120px");
+windowZain.setWidth("100px");  //设置窗口相关属性
+windowZain.setHeight("150px");
 windowZain.setMaxWidth("200px");
-windowZain.setMaxHeight("120px");
-windowZain.setMinWidth("200px");
-windowZain.setMinHeight("120px");
+windowZain.setMaxHeight("150px");
+windowZain.setMinWidth("100px");
+windowZain.setMinHeight("150px");
 windowZain.setTitleHeight("30px");
 windowZain.setBorderWidth("5px");
-windowZain.setLeft("560px");
+windowZain.setLeft("590px");
 windowZain.setTop("450px");
 windowZain.showWindowInfo();

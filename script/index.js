@@ -3,9 +3,9 @@ var personName = new Array("",
   "曾文豪", "廖元武", "吴小伟", "熊敏", "罗剑", "付建平", "罗智强", "彭昌文", "王福东",
   "邓琼", "谢晔玲", "曾小斌", "段聪", "康宇晨", "孔佳承", "欧阳煜", "朱佳", "陈志银",
   "戴新亮", "周吉海", "欧著源", "朱婷", "杨成龙", "鄢艳玲", "郭莉华",
-  "熊志勇", "朱模建",
-  "张君", "徐海洋", "何银昆", "邹逸帆", "吴志峰", "李福东", "凌杰", "欧阳浩明", "陈涛",
-  "彭昌文", "--38--", "--39--", "--40--", "--41--", "--42--", "--43--", "--44--", "--45--",
+  "熊志勇", "朱模健",
+  "张君", "徐海洋", "何银坤", "邹逸凡", "吴志锋", "樊泽亮", "凌杰", "欧阳皓明", "陈涛",
+  "李川娇", "褚后屹", "--39", "--40--", "--41--", "--42--", "--43--", "--44--", "--45--",
   "--46--", "--47--", "--48--", "--49--", "--50--", "--51--", "--52--", "--53--", "--54--"
 );
 // var pn = new Array();
@@ -170,6 +170,8 @@ function shiftButton() {  //背景与位置选择框切换功能
       seb.style.backgroundPosition = "0px -500px";
       shb.innerText = "seat";
       // shb.style.bottom = "-45px";
+      windowZain.setLeft("2px");
+      windowZain.setTop("2px");
       for(var i = 0; i < span.length; i++) {
         span[i].style.display = "inline-block";
       }
@@ -183,6 +185,8 @@ function shiftButton() {  //背景与位置选择框切换功能
       seb.style.backgroundPosition = "0px 0px";
       shb.innerText = "show";
       // shb.style.bottom = "100px";
+      windowZain.setLeft("590px");
+      windowZain.setTop("450px");
       for(var i = 0; i < span.length; i++) {
         span[i].style.display = "none";
       }
