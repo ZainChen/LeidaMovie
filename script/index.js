@@ -170,8 +170,8 @@ function shiftButton() {  //背景与位置选择框切换功能
       seb.style.backgroundPosition = "0px -500px";
       shb.innerText = "seat";
       // shb.style.bottom = "-45px";
-      windowZain.setLeft("2px");
-      windowZain.setTop("2px");
+      windowZain.setLeft("5px");
+      windowZain.setTop("10px");
       for(var i = 0; i < span.length; i++) {
         span[i].style.display = "inline-block";
       }
