@@ -1,0 +1,477 @@
+@font-face {  /*引用外部字体*/
+  font-family: monaco; /*这里是说明调用来的字体名字*/ 
+  src: url('../font/monaco.ttf'); /*这里是字体文件路径*/ 
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei", "monaco";
+  /*background: pink;*/
+}
+.start {
+  position: absolute;
+  z-index: 100;
+  top: 80px;
+  width: 100%;
+  height: 40px;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+}
+.start:hover {
+  cursor: pointer;
+  color: #eee;
+  background: rgba(0,0,0,0.2);
+}
+.select-person {
+  position: absolute;
+  z-index: 100;
+  bottom: 0px;
+  width: 50px;
+  height: 50%;
+  background: rgba(0,0,0,0.2);
+}
+.select-person:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+}
+.hide-yn {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.hide-yn:hover {
+  color: #eee;
+  background: rgba(0,0,0,0.7);
+}
+.seat-border {
+  position: relative;
+  width: 1150px;
+  height: 600px;
+  margin: auto;
+  background: url(../image/logo1_3.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  transition: 2s;
+  -moz-transition: 2s; /* Firefox 4 */
+  -webkit-transition: 2s; /* Safari 和 Chrome */
+  -o-transition: 2s; /* Opera */
+}
+.shift-button,.all-choice {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition: 0.5s; /* Safari 和 Chrome */
+  -o-transition: 0.5s; /* Opera */
+}
+.shift-button:hover {
+  cursor: pointer;
+  background: #555;
+}
+.all-choice {
+  top: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  background: rgba(0,0,0,0.5);
+}
+.all-choice:hover {
+  cursor: pointer;
+  background: #555;
+}
+.seat {
+  list-style: none;
+  width: 955px;
+  height: 500px;
+  margin: auto;
+  /*background: rgba(255,255,255,1);*/
+}
+.seat li {
+  position: relative;
+  float: left;
+  width: 90px;
+  height: 115px;
+  margin-top: 5px;
+  margin-right: 8px;
+  margin-left: 8px;
+  -moz-border-radius: 10px;      /* Gecko browsers */
+  -webkit-border-radius: 10px;   /* Webkit browsers */
+  border-radius: 10px;            /* W3C syntax */
+  /*background: rgba(0,0,0,0.2);*/
+}
+.seat li:hover {
+  cursor: pointer;
+  /*background: rgba(0,0,0,0.3);*/
+}
+.seat #li14,.seat #li15 {
+  background: rgba(240,154,154,0);
+}
+.seat #li14:hover,.seat #li15:hover {
+  cursor: default;
+}
+.seat li div,.seat li h1 {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,255,255,0.1);
+  -moz-border-radius: 10px;      /* Gecko browsers */
+  -webkit-border-radius: 10px;   /* Webkit browsers */
+  border-radius: 10px;            /* W3C syntax */
+  transition: 0.5s;
+  -moz-transition: 0.5s; /* Firefox 4 */
+  -webkit-transition: 0.5s; /* Safari 和 Chrome */
+  -o-transition: 0.5s; /* Opera */
+}
+.li-person1 {
+  z-index: 1;
+  left: -100px;
+}
+.li-person2 {
+  z-index: 2;
+  left: -206px;
+  top: 10px;
+}
+.li-person3 {
+  z-index: 3;
+  left: -312px;
+  top: 20px;
+}
+.li-person4 {
+  z-index: 4;
+  left: -418px;
+  top: 30px;
+}
+.li-person5 {
+  z-index: 5;
+  left: -524px;
+  top: 40px;
+}
+.li-person6 {
+  z-index: 9;
+  left: 418px;
+  top: 0px;
+}
+.li-person7 {
+  z-index: 8;
+  left: 312px;
+  top: 10px;
+}
+.li-person8 {
+  z-index: 7;
+  left: 206px;
+  top: 20px;
+}
+.li-person9 {
+  z-index: 6;
+  left: 100px;
+  top: 30px;
+}
+.li-person10 {
+  z-index: 10;
+  left: -100px;
+  top: 0px;
+}
+.li-person11 {
+  z-index: 11;
+  left: -206px;
+  top: 10px;
+}
+.li-person12 {
+  z-index: 12;
+  left: -312px;
+  top: 20px;
+}
+.li-person13 {
+  z-index: 13;
+  left: -418px;
+  top: 20px;
+}
+.li-person14 {
+  z-index: 18;
+  left: 524px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person15 {
+  z-index: 17;
+  left: 418px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person16 {
+  z-index: 16;
+  left: 312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person17 {
+  z-index: 15;
+  left: 206px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person18 {
+  z-index: 14;
+  left: 100px;
+  top: 40px;
+  transition: 0.5s;
+}
+.li-person19 {
+  z-index: 19;
+  left: -100px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person20 {
+  z-index: 20;
+  left: -206px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person21 {
+  z-index: 21;
+  left: -312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person22 {
+  z-index: 22;
+  left: -418px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person23 {
+  z-index: 23;
+  left: -524px;
+  top: 40px;
+  transition: 0.5s;
+}
+.li-person24 {
+  z-index: 27;
+  left: 418px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person25 {
+  z-index: 26;
+  left: 312px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person26 {
+  z-index: 25;
+  left: 206px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person27 {
+  z-index: 24;
+  left: 100px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person28 {
+  z-index: 28;
+  left: -100px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person29 {
+  z-index: 29;
+  left: -206px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person30 {
+  z-index: 30;
+  left: -312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person31 {
+  z-index: 31;
+  left: -418px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person32 {
+  z-index: 36;
+  left: 524px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person33 {
+  z-index: 33;
+  left: 418px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person34 {
+  z-index: 34;
+  left: 312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person35 {
+  z-index: 33;
+  left: 206px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person36 {
+  z-index: 32;
+  left: 100px;
+  top: 40px;
+  transition: 0.5s;
+}
+.li-person37 {
+  z-index: 37;
+  left: -100px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person38 {
+  z-index: 38;
+  left: -206px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person39 {
+  z-index: 39;
+  left: -312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person40 {
+  z-index: 40;
+  left: -418px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person41 {
+  z-index: 41;
+  left: -524px;
+  top: 40px;
+  transition: 0.5s;
+}
+.li-person42 {
+  z-index: 45;
+  left: 418px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person43 {
+  z-index: 44;
+  left: 312px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person44 {
+  z-index: 43;
+  left: 206px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person45 {
+  z-index: 42;
+  left: 100px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person46 {
+  z-index: 28;
+  left: -100px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person47 {
+  z-index: 29;
+  left: -206px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person48 {
+  z-index: 30;
+  left: -312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person49 {
+  z-index: 31;
+  left: -418px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person50 {
+  z-index: 36;
+  left: 524px;
+  top: 0px;
+  transition: 0.5s;
+}
+.li-person51 {
+  z-index: 33;
+  left: 418px;
+  top: 10px;
+  transition: 0.5s;
+}
+.li-person52 {
+  z-index: 34;
+  left: 312px;
+  top: 20px;
+  transition: 0.5s;
+}
+.li-person53 {
+  z-index: 33;
+  left: 206px;
+  top: 30px;
+  transition: 0.5s;
+}
+.li-person54 {
+  z-index: 32;
+  left: 100px;
+  top: 40px;
+  transition: 0.5s;
+}
+.seat li div p {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+}
+.seat li img {
+  width: 100%;
+  height: 100%;
+}
+.seat li span {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+}
+.seat #li14 span,.seat #li15 span,.seat #li49 span {
+  background: rgba(0,0,0,0.8);
+}
